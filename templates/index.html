@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+	<table class="w3-table-all w3-card-4 w3-animate-top">
+		
+		<tr>
+			{%for h in header%}
+			<th>
+			{{h}}
+			</th>
+			{%endfor%}
+		</tr>
+		{%for student in slist%}
+		<tr>
+			{%for key, value in student.items()%}
+				<td>{{value}}</td>
+			{%endfor%}
+		</tr>
+		
+		
+		{%endfor%}
+	</table>
+{% endblock %}
